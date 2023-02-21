@@ -70,3 +70,12 @@ function updateMessage(): void {
     messageEl.textContent = `${turn === 1 ? 'X' : 'O'} wins`;
   }
 }
+
+
+function handleClick(evt: MouseEvent): void {
+  const sqIdx = parseInt((evt.target as HTMLElement).id[2]);
+  if (isNaN(sqIdx) || board[sqIdx] || winner) {
+    return;
+  }
+  render();
+}

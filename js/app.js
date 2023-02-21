@@ -61,3 +61,10 @@ function updateMessage() {
         messageEl.textContent = `${turn === 1 ? 'X' : 'O'} wins`;
     }
 }
+function handleClick(evt) {
+    const sqIdx = parseInt(evt.target.id[2]);
+    if (isNaN(sqIdx) || board[sqIdx] || winner) {
+        return;
+    }
+    render();
+}
