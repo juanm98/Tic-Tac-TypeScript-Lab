@@ -21,3 +21,9 @@ let tie: boolean
 
 /*------------------------ Cached Element References ------------------------*/
 
+const squareEls = document.querySelectorAll<HTMLElement>(".sqr0, .sqr1, .sqr2, .sqr3, .sqr4, .sqr5, .sqr6, .sqr7, .sqr8");
+const messageEl = document.getElementById("message") as HTMLElement;
+const gameBoardEl = document.querySelector<HTMLElement>(".board");
+const resetBtnEl = document.getElementById("btn") as HTMLElement;
+
+/*----------------------------- Event Listeners -----------------------------*/

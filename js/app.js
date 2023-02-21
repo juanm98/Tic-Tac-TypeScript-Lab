@@ -16,3 +16,8 @@ let turn;
 let winner;
 let tie;
 /*------------------------ Cached Element References ------------------------*/
+const squareEls = document.querySelectorAll(".sqr0, .sqr1, .sqr2, .sqr3, .sqr4, .sqr5, .sqr6, .sqr7, .sqr8");
+const messageEl = document.getElementById("message");
+const gameBoardEl = document.querySelector(".board");
+const resetBtnEl = document.getElementById("btn");
+/*----------------------------- Event Listeners -----------------------------*/ 
