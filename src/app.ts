@@ -27,3 +27,22 @@ const gameBoardEl = document.querySelector<HTMLElement>(".board");
 const resetBtnEl = document.getElementById("btn") as HTMLElement;
 
 /*----------------------------- Event Listeners -----------------------------*/
+
+gameBoardEl?.addEventListener('click', handleClick);
+resetBtnEl?.addEventListener('click', init);
+
+/*-------------------------------- Functions --------------------------------*/
+
+init();
+
+function init(): void {
+  board = [null, null, null, null, null, null, null, null, null];
+  turn = 1;
+  winner = false;
+  tie = false;
+  render();
+}
+
+function render(): void {
+  
+}

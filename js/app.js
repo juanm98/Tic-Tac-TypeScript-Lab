@@ -20,4 +20,17 @@ const squareEls = document.querySelectorAll(".sqr0, .sqr1, .sqr2, .sqr3, .sqr4, 
 const messageEl = document.getElementById("message");
 const gameBoardEl = document.querySelector(".board");
 const resetBtnEl = document.getElementById("btn");
-/*----------------------------- Event Listeners -----------------------------*/ 
+/*----------------------------- Event Listeners -----------------------------*/
+gameBoardEl?.addEventListener('click', handleClick);
+resetBtnEl?.addEventListener('click', init);
+/*-------------------------------- Functions --------------------------------*/
+init();
+function init() {
+    board = [null, null, null, null, null, null, null, null, null];
+    turn = 1;
+    winner = false;
+    tie = false;
+    render();
+}
+function render() {
+}
