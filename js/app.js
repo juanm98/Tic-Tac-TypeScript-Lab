@@ -33,4 +33,20 @@ function init() {
     render();
 }
 function render() {
+    updateBoard();
+    updateMessage();
+}
+function updateBoard() {
+    board.forEach((square, index) => {
+        const squareEl = squareEls[index];
+        if (square === 1) {
+            squareEl.innerText = 'X';
+        }
+        else if (square === -1) {
+            squareEl.innerText = 'O';
+        }
+        else {
+            squareEl.innerText = '';
+        }
+    });
 }

@@ -44,5 +44,19 @@ function init(): void {
 }
 
 function render(): void {
-  
+  updateBoard();
+  updateMessage();
+}
+
+function updateBoard(): void {
+  board.forEach((square: number | null, index: number) => {
+    const squareEl = squareEls[index];
+    if (square === 1) {
+      squareEl.innerText = 'X';
+    } else if (square === -1) {
+      squareEl.innerText = 'O';
+    } else {
+      squareEl.innerText = '';
+    }
+  });
 }
