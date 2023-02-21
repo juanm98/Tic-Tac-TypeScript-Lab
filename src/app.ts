@@ -77,5 +77,17 @@ function handleClick(evt: MouseEvent): void {
   if (isNaN(sqIdx) || board[sqIdx] || winner) {
     return;
   }
+  placePiece(sqIdx);
+  checkForTie();
   render();
+}
+
+function placePiece(idx: number): void {
+  board[idx] = turn;
+}
+
+function checkForTie(): void {
+  if (!board.includes(null)) {
+    tie = true;
+  }
 }
