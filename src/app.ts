@@ -1,3 +1,5 @@
+/*-------------------------------- Constants --------------------------------*/
+
 let winningCombos: number[][] = 
 [  
   [0, 1, 2],
@@ -9,3 +11,13 @@ let winningCombos: number[][] =
   [2, 5, 8],
   [1, 4, 7]
 ];
+
+/*---------------------------- Variables (state) ----------------------------*/
+
+let board: (number | null)[]
+let turn: number
+let winner: boolean
+let tie: boolean
+
+/*------------------------ Cached Element References ------------------------*/
+

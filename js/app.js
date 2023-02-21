@@ -1,4 +1,5 @@
 "use strict";
+/*-------------------------------- Constants --------------------------------*/
 let winningCombos = [
     [0, 1, 2],
     [3, 4, 5],
@@ -9,3 +10,9 @@ let winningCombos = [
     [2, 5, 8],
     [1, 4, 7]
 ];
+/*---------------------------- Variables (state) ----------------------------*/
+let board;
+let turn;
+let winner;
+let tie;
+/*------------------------ Cached Element References ------------------------*/
