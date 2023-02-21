@@ -60,3 +60,13 @@ function updateBoard(): void {
     }
   });
 }
+
+function updateMessage(): void {
+  if (!winner && !tie) {
+    messageEl.textContent = `It's ${turn === 1 ? 'X' : 'O'}'s turn`;
+  } else if (!winner && tie) {
+    messageEl.textContent = 'Tie!';
+  } else {
+    messageEl.textContent = `${turn === 1 ? 'X' : 'O'} wins`;
+  }
+}
