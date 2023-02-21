@@ -68,6 +68,8 @@ function handleClick(evt) {
     }
     placePiece(sqIdx);
     checkForTie();
+    checkForWinner();
+    switchPlayerTurn();
     render();
 }
 function placePiece(idx) {
@@ -76,5 +78,29 @@ function placePiece(idx) {
 function checkForTie() {
     if (!board.includes(null)) {
         tie = true;
+    }
+}
+function checkForWinner() {
+    const winningCombos = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+        [0, 3, 6],
+        [2, 5, 8],
+        [1, 4, 7],
+    ];
+    for (let i = 0; i < winningCombos.length; i++) {
+        const [a, b, c] = winningCombos[i];
+        if (board[a] === board[b] && board[b] === board[c] && board[a] !== null) {
+            winner = true;
+            return;
+        }
+    }
+}
+function switchPlayerTurn() {
+    if (!winner) {
+        turn *= -1;
     }
 }
